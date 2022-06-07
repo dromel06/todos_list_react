@@ -1,8 +1,16 @@
 import React from 'react'
+import './styles/CreateTodoButton.css'
 
 function CreateTodoButton() {
+
+    const onClickButton = () => {
+        alert('clicked')
+    }
+
     return (
-        <button>༼ つ ◕_◕ ༽つ</button>
+        <button className='CreateTodoButton'
+        onClick={onClickButton}
+        >༼ つ ◕_◕ ༽つ</button>
     )
 }
 

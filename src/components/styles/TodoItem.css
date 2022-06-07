@@ -1,0 +1,72 @@
+.TodoItem{
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+
+
+
+    background: rgba(226, 226, 226, 0.1);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16px );
+    -webkit-backdrop-filter: blur( 16px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.TodoItem p {
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 100%;
+}
+
+.textoCompleted{
+    text-decoration:line-through;
+}
+
+.gancho{
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.completed {
+    color: green;
+}
+
+.borrar{
+    position: absolute;
+    margin-left: 10px;
+    font-size: 20px;
+    margin-top: -50px;
+    z-index: 1;
+    right: 12px;
+}
+
+.borrar:hover{
+    color: red;
+    
+    animation-duration: 5s;
+    animation-name: girar;
+
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+        font-size: 24px;
+    }
+    50% {
+        transform: rotate(180deg);
+        font-size: 22px;
+    }
+    100% {
+        transform: rotate(360deg);
+        font-size: 24px;
+    }
+}
+

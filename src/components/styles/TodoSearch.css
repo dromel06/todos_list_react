@@ -1,0 +1,59 @@
+.TodoSearch{
+    display: flex;
+    /* Glass */
+    background: rgba( 255, 255, 255, 0.15 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    /* ----- */
+    width: 400px;
+    height: 36px;
+    margin:  12px auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+.TodoInputSearch{
+    width: 100%;
+    height: 100%;
+    padding-left: 25px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: rgb(51, 49, 49);
+    text-align: center;
+    background: rgba(26, 26, 26, 0);
+}
+
+.TodoButtonSearch{
+    width: fit-content;
+    height: max-content;
+    border: none;
+    outline: none;
+    margin: auto auto;
+    font-size: 24px;
+    text-align: right;
+    background: rgba( 255, 255, 255, 0 );
+}
+
+.TodoButtonSearch:hover {
+    /* Rotate 90deg slow*/
+    animation-duration: 1s;
+    animation-name: rotar;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+        font-size: 24px;
+    }
+  
+    100% {
+        transform: rotate(-45deg);
+        font-size: 22px;
+    }
+
+  }
