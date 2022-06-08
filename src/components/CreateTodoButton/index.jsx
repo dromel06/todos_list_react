@@ -1,5 +1,5 @@
 import React from 'react'
-import './styles/CreateTodoButton.css'
+import './CreateTodoButton.css'
 
 function CreateTodoButton() {
 
@@ -9,7 +9,7 @@ function CreateTodoButton() {
 
     return (
         <button className='CreateTodoButton'
-        onClick={onClickButton}
+            onClick={onClickButton}
         >༼ つ ◕_◕ ༽つ</button>
     )
 }

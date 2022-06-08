@@ -1,11 +1,11 @@
 import React from "react";
-import './styles/TodoCounter.css'
+import './TodoCounter.css'
 
-function TodoCounter() {
+function TodoCounter({total, completed}) {
     return (
         <div className="title">
             <h1 className="TitleTodo">Dromel TODOS List</h1>
-            <h2 className="TodoCounter">Has Completado 3 tareas de 2</h2>
+            <h2 className="TodoCounter">Has Completado    {completed} tareas de {total}</h2>
         </div>
     );  
 }
