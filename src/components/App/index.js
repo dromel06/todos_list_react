@@ -4,38 +4,57 @@ import "./App.css";
 
 
 // const defaultTodos = [
-	// { text: 'Cortar Cebollas', completed: false },
-	// { text: 'Hacer una tarea', completed: true },
-	// { text: 'Hacer otra tarea', completed: false },
-	// { text: 'tarea', completed: true },
+// 	{ text: 'Cortar Cebollas', completed: false },
+// 	{ text: 'Hacer una tarea', completed: true },
+// 	{ text: 'Hacer otra tarea', completed: false },
+// 	{ text: 'tarea', completed: true },
 // ];
 
 function useLocalStorage(itemName, initialValue) {
+	// const (loanding, setLoading) = React.useState(true);
+	const [item, setItem] = React.useState(initialValue);
 
-	const localStorageItem = localStorage.getItem(itemName);
-	let parsedItem;
 
-	if (!localStorageItem) {
-		localStorage.setItem(itemName, JSON.stringify(initialValue));
-		parsedItem = [];
-	}
+	React.useEffect(() => {
+		const localStorageItem = localStorage.getItem(itemName);
+		let parsedItem;
 
-	else {
-		parsedItem = JSON.parse(localStorageItem);
-	}
+		if (!localStorageItem) {
+			localStorage.setItem(itemName, JSON.stringify(initialValue));
+			parsedItem = [];
+		}
 
-	const [item, setItem] = React.useState(parsedItem);
+		else {
+			parsedItem = JSON.parse(localStorageItem);
+		}
+
+		setItem(parsedItem);
+		// setLoading(false);
+	}, 1000);
+
+	
+
+	// const [item, setItem] = React.useState(parsedItem);
 
 	const saveItem = (newItem) => {
 		setItem(newItem);
 		localStorage.setItem("TODOS_V1", JSON.stringify(newItem));
 	}
 
-	return [item, saveItem];
+	return {
+		item, 
+		saveItem
+		// loanding
+	};
 
 }
 
 function App() {
+	// const {
+	// 	item: todos,
+	// 	saveItem: saveTodos,
+	// 	loanding
+	// }
 	const [todos, saveTodos] = useLocalStorage("TODOS_V1", []);
 
 
@@ -73,9 +92,13 @@ function App() {
 		saveTodos(newTodos);
 	}
 
+	console.log('Render Antes')
+
 	React.useEffect(() => {
-		console.log("useEffect");
-	});
+		console.log("use Effect");
+	}, [totalTodos]);
+
+	console.log('Render Despues')
 
 	return (
 		<AppUI 
