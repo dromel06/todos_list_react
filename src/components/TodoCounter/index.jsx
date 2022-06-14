@@ -1,11 +1,14 @@
 import React from "react";
-import './TodoCounter.css'
+import './TodoCounter.css';
+import { TodoContext } from "../TodoContext";
 
-function TodoCounter({total, completed}) {
+function TodoCounter() {
+    const {totalTodos, completedTodos} = React.useContext(TodoContext);
+
     return (
         <div className="title">
             <h1 className="TitleTodo">Dromel TODOS List</h1>
-            <h2 className="TodoCounter">Has Completado    {completed} tareas de {total}</h2>
+            <h2 className="TodoCounter">Has Completado {completedTodos} tareas de {totalTodos}</h2>
         </div>
     );  
 }

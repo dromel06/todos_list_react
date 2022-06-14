@@ -1,0 +1,58 @@
+
+
+.TodoForm {
+  font-size: 16px;
+  text-align: center;
+  /* Glass */
+  background: rgba(219, 219, 219, 0.87);
+  box-shadow: 0 8px 32px 0 rgba(211, 211, 211, 0.76);
+  backdrop-filter: blur( 18px );
+  -webkit-backdrop-filter: blur( 18px );
+  border-radius: 10px;
+  border: 1px solid rgba(196, 196, 196, 0.18);
+  /* ---------- */
+  padding: 50px 50px;
+}
+
+.TodoFormLabel {
+  font-size: 28px;
+  text-align: center;
+  margin-top: -10px;
+  font-weight: 700;
+  color: black;
+
+}
+
+.TodoFormTextarea{
+  display: block;
+  border: 1px solid rgba(196, 196, 196, 0.18);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  margin : 2px auto;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.FormButton {
+  /* fixed Buttom */
+  font-size: 16px;
+  width: max-content;
+  margin: 10px 10px 0 10px;
+  padding: 2px 20px;
+
+  /* glass */
+  background: rgba( 255, 255, 255, 0.55 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 18px );
+  -webkit-backdrop-filter: blur( 18px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  /* -------------- */
+}
+
+.FormButton:hover {
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+
+}
