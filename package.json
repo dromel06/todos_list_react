@@ -17,7 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -m \"Deployed with gh-pages\""
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +40,5 @@
   "devDependencies": {
     "gh-pages": "^4.0.0"
   },
-  "homepage": "https://dromel06.github.io/curso-react-platzi"
+  "homepage": "https://dromel06.github.io/todos-list-react/"
 }
